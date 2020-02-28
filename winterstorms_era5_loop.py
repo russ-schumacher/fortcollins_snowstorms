@@ -10,8 +10,6 @@
 
 #Imports
 
-from datetime import datetime
-
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 import matplotlib.gridspec as gridspec
