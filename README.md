@@ -28,8 +28,9 @@ If you're working through the code and making modifications, etc., you may want 
 
 Once everything is in place, you should be able to simply run the code with:
 `python winterstorms_era5_loop.py` 
-from the command line.  It will create subdirectories for each storm and will write the png image files to those subdirectories.
+from the command line.  It will automatically create subdirectories for each storm and will write the png image files to those subdirectories.
 
 
+## Acknowledgments
 
-
+Huge thanks to [Unidata](https://unidata.github.io/python-training/) for their training materials and tools. 
