@@ -15,7 +15,7 @@ I built this to analyze storms with at least 12" of total snowfall, where a 'sto
 
 This is organized into one giant python program, `winterstorms_era5_loop.py`.  This may not be the finest programming practice but it will do everything in a single step.  If you wanted to modify this for your own purposes, there are just a few things that you might need to change:
 
-1) The filename that is read in as 'case_data_all' (currently `snowstorms_12inch_fortcollins_post1979.csv`)
+1) The filename that is read in as `case_data_all` (currently `snowstorms_12inch_fortcollins_post1979.csv`)
 2) The different fields to plot have 'True/False' settings for whether you want them plotted or not
 3) The number of dates and times you want to plot.  Currently, the code finds the start date of the event from the csv file, then starts plotting four days before that date (`timedelta(days=4)`) and continues through four days after. If you wanted more or fewer days, just change the 4 to something else.  Right now it also is set to only get data at 00 and 12 UTC from ERA5, but ERA5 has files every hour, so in your calls to the ECWMF API you could add more times.  
 4) lat/lon areas for downloaded data and/or plots.  These you will need to adjust in various places in the code, both in the call to the ECWMF API, and also for individual plots (which have varying lat/lon bounds).
