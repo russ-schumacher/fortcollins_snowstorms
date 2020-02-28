@@ -19,10 +19,8 @@ import matplotlib.pylab as plt
 import metpy.calc as mpcalc
 from metpy.units import units
 from metpy.plots import ctables
-from netCDF4 import num2date
 import numpy as np
 import scipy.ndimage as ndimage
-from siphon.ncss import NCSS
 import cdsapi
 import fsspec
 import xarray as xr
