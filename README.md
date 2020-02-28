@@ -24,6 +24,12 @@ This is organized into one giant python program, `winterstorms_era5_loop.py`.  T
 If you're working through the code and making modifications, etc., you may want to copy chunks into a jupyter notebook - this is how I wrote the code.  
 
 
+## Running the code
+
+Once everything is in place, you should be able to simply run the code with:
+`python winterstorms_era5_loop.py` 
+from the command line.  It will create subdirectories for each storm and will write the png image files to those subdirectories.
+
 
 
 
