@@ -9,7 +9,7 @@ This code also requires you to get an account for ECMWF's "Climate Data Store" A
 
 ## Which cases are we interested in?
 
-I built this to analyze storms with at least 12" of total snowfall, where a 'storm' is defined as one or more consecutive days of measurable snowfall, at the Fort Collins weather station since 1979.  It plots maps starting four days before the first day of the storm, through four days after the first day of the storm; with maps twice a day at 00 and 12 UTC.  Here, these are listed in a file named `snowstorms_12inch_fortcollins_post1979.csv`, which also includes the total and daily snowfall for each storm.  *But here's the easy part: all you need is a text or csv file with a single column of dates to read in, and the code will make plots for your list of cases.* 
+I built this to analyze storms with at least 12" of total snowfall, where a 'storm' is defined as one or more consecutive days of measurable snowfall, at the Fort Collins weather station since 1979.  It plots maps starting four days before the first day of the storm, through four days after the first day of the storm; with maps twice a day at 00 and 12 UTC.  Here, these are listed in a file named `snowstorms_12inch_fortcollins_post1979.csv`, which also includes the total and daily snowfall for each storm.  *But here's the easy part: all you need is a text or csv file with a single column of dates to read in, and the code will make plots for your list of cases.*  And wait, there's more! This does not actually download ERA5 files (instead, it reads them remotely), so it will only take up minimal disk space. 
 
 ## The code
 
