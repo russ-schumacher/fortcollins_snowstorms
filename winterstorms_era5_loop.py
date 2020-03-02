@@ -386,6 +386,9 @@ for cc in range(0,num_cases):
             uwnd_700 = iso_vars_this.u.sel(level=700)
             vwnd_700 = iso_vars_this.v.sel(level=700)
             tmpk_700 = iso_vars_this.t.sel(level=700)
+            
+            # Use MetPy to calculate the wind speed before smoothing, change units to knots from m/s
+            sped_700 = mpcalc.wind_speed(uwnd_700, vwnd_700).to('kt')
 
             ## first, smooth everything pretty heavily:
             tmpk_700 = ndimage.gaussian_filter(tmpk_700, sigma=6, order=0) * units('kelvin')
@@ -471,9 +474,6 @@ for cc in range(0,num_cases):
 
             if plot_700wsp:
             
-                # Use MetPy to calculate the wind speed for colorfill plot, change units to knots from m/s
-                sped_700 = mpcalc.wind_speed(uwnd_700, vwnd_700).to('kt')
-
                 #Map Creation
 
                 print('plotting 700 wind speed')
