@@ -49,8 +49,6 @@ plot_pwat = False
 ## how many days before/after to use?
 n_days_before = 4
 n_days_after = 4
-n_times_per_day = 2  # this better match the number of times you're asking the API for
-n_times_tot = (n_days_before+n_days_after+1)*n_times_per_day
 
 ## loop over cases
 for cc in range(0,num_cases):
