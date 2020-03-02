@@ -46,6 +46,12 @@ plot_700qvect = False
 plot_dt_theta = False
 plot_pwat = False
 
+## how many days before/after to use?
+n_days_before = 4
+n_days_after = 4
+n_times_per_day = 2  # this better match the number of times you're asking the API for
+n_times_tot = (n_days_before+n_days_after+1)*n_times_per_day
+
 ## loop over cases
 for cc in range(0,num_cases):
 #for cc in range(16,num_cases):
@@ -62,8 +68,8 @@ for cc in range(0,num_cases):
     month = case_date[4:6]
     storm_start_day = case_date[6:8]
 
-    plots_start_day = datetime(int(year),int(month),int(storm_start_day),0) - timedelta(days=4)
-    plots_end_day = datetime(int(year),int(month),int(storm_start_day),0) + timedelta(days=4)
+    plots_start_day = datetime(int(year),int(month),int(storm_start_day),0) - timedelta(days=n_days_before)
+    plots_end_day = datetime(int(year),int(month),int(storm_start_day),0) + timedelta(days=n_days_after)
 
     for date in rrule.rrule(rrule.DAILY,dtstart=plots_start_day,until=plots_end_day):
 
