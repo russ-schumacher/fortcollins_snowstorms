@@ -36,15 +36,15 @@ num_cases = case_data_all['start_date'].shape[0]
 print('working on '+str(num_cases)+' cases')
 
 ## which fields to plot?
-plot_250wsp = False
-plot_500vort = False
-plot_700wsp = False
-plot_850temp = False
+plot_250wsp = True
+plot_500vort = True
+plot_700wsp = True
+plot_850temp = True
 plot_mslp_thk = True
 plot_mslp_precip = True
-plot_700qvect = False
-plot_dt_theta = False
-plot_pwat = False
+plot_700qvect = True
+plot_dt_theta = True
+plot_pwat = True
 
 ## how many days before/after to use?
 n_days_before = 4
