@@ -723,8 +723,8 @@ for cc in range(0,num_cases):
             
                 ## smooth the theta and winds
                 dt_theta = ndimage.gaussian_filter(dt_vars_this.pt.data, sigma=3, order=0) * units('kelvin')
-                dt_uwnd = ndimage.gaussian_filter(dt_vars_this.u.data, sigma=2, order=0) * units('kt')
-                dt_vwnd = ndimage.gaussian_filter(dt_vars_this.v.data, sigma=2, order=0) * units('kt')
+                dt_uwnd = ndimage.gaussian_filter(dt_vars_this.u.data, sigma=2, order=0) * units('m/s')
+                dt_vwnd = ndimage.gaussian_filter(dt_vars_this.v.data, sigma=2, order=0) * units('m/s')
 
                 dt_lon = dt_vars_this.longitude.data
                 dt_lat = dt_vars_this.latitude.data
@@ -778,7 +778,7 @@ for cc in range(0,num_cases):
                 # Plot Wind Barbs
                 # Transform Vectors and plot wind barbs.
                 wind_slice = slice(None, None, 14)
-                ax.barbs(dt_lon[wind_slice], dt_lat[wind_slice], dt_uwnd[wind_slice,wind_slice].m, dt_vwnd[wind_slice,wind_slice].m, 
+                ax.barbs(dt_lon[wind_slice], dt_lat[wind_slice], dt_uwnd[wind_slice,wind_slice].to(units('kt')).m, dt_vwnd[wind_slice,wind_slice].to(units('kt')).m, 
                          length=7, linewidth=0.5,pivot='middle', transform=ccrs.PlateCarree())
 
                 outfile="dt_theta_era5_"+this_time.strftime('%Y%m%d')+"_"+this_time.strftime('%H%M')+".png"
