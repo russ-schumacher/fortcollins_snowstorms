@@ -13,7 +13,7 @@ I built this to analyze storms with at least 12" of total snowfall, where a 'sto
 
 ## The code
 
-This is organized into one giant python program, `winterstorms_era5_loop.py`.  This may not be the finest programming practice but it will do everything in a single step.  If you wanted to modify this for your own purposes, there are just a few things that you might need to change:
+This is organized into one giant python program, `winterstorms_era5_loop.py` (or an updated version, `winterstorms_era5_metpyV1_loop.py`).  This may not be the finest programming practice but it will do everything in a single step.  If you wanted to modify this for your own purposes, there are just a few things that you might need to change:
 
 1) The filename that is read in as `case_data_all` (currently `snowstorms_12inch_fortcollins_post1979.csv`)
 2) The different fields to plot have 'True/False' settings for whether you want them plotted or not
